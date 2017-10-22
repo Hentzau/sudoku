@@ -56,7 +56,7 @@ class SudokuGrid(object):
 		self.n = n
 		for x in range(1, n**2+1):
 			for y in range(1, n**2+1):
-				self.cells.append(SudokuCell(x, y, n))
+				self.cells.append(SudokuCell(x, y))
 
 	def get_check_values(self, check_cell):
 		return [cell.value for cell in self.cells 
