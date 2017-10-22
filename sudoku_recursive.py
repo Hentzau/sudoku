@@ -106,7 +106,7 @@ class SudokuGrid(object):
 					The key thing to understand is that this statement won't return True until the entire grid has been 
 					solved - when it hits this point it's just building out solution paths until it finds one that works.
 					'''
-					if position + 1 == depth or recursive_solve(position + 1):
+					if position + 1 == len(self.cells) or recursive_solve(position + 1):
 						return True
 			# If all possible values are checked (both in this step and in subsequent recursion steps) without valid 
 			# solutions being found, this branch is a dead-end. Reset the cell value so that other solutions may be 
